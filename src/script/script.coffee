@@ -1,0 +1,2 @@
+jsTest = () ->
+  alert('BIG SUCCESS!')
