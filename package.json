@@ -8,6 +8,7 @@
     "grunt-contrib-compass": "~0.3.0",
     "grunt-contrib-jade": "~0.7.0",
     "grunt-contrib-watch": "~0.4.4",
-    "grunt-contrib-clean": "~0.4.1"
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-bower-task": "~0.2.3"
   }
 }

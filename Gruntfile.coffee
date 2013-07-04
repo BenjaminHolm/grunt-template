@@ -3,6 +3,14 @@ module.exports = (grunt) ->
   # Project configuration.
   grunt.initConfig
     pkg: grunt.file.readJSON("package.json")
+
+    bower:
+      development:
+        options:
+          cleanTargetDir: true
+          cleanBowerDir: true
+          targetDir: './src/lib'
+
     clean:
       all:['build']
 
@@ -27,7 +35,7 @@ module.exports = (grunt) ->
     jade:
       development:
         options:
-          pretty: true
+          pretty: false
         files: [
           expand: true,
           src: '**/*.jade',
@@ -44,6 +52,11 @@ module.exports = (grunt) ->
         ]
 
     watch:
+      bower:
+        files: 'bower.json'
+        tasks: 'bower'
+        options:
+          livereload: true
       coffee:
         files: 'src/script/**/*.coffee'
         tasks: 'coffee:development'
@@ -65,6 +78,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-compass"
   grunt.loadNpmTasks "grunt-contrib-jade"
   grunt.loadNpmTasks "grunt-contrib-watch"
+  grunt.loadNpmTasks "grunt-bower-task"
 
   # Default task(s).
-  grunt.registerTask "default", ["clean:all", "coffee" ,"compass", "jade", "watch"]
+  grunt.registerTask "default", ["bower:development", "clean:all", "coffee" ,"compass", "jade", "watch"]
