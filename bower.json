@@ -4,23 +4,23 @@
     "repository": {
         "type": "git",
         "url": "git://github.com/kevin-smets/grunt-template"
-    },
-
-    //  "ignore": [
-    //  ],
-    //  "dependencies": {
-    //  },
-    //  "devDependencies": {
-    //      "animate.css": "latest"
-    //  },
-
-    "exportsOverride": {
-        "animate.css": {
-            "__untyped__": [
-                "bower.json",
-                "animate.css",
-                "animate.min.css"
-            ]
-        }
     }
+
+//    "ignore": [
+//    ],
+//    "dependencies": {
+//    },
+//    "devDependencies": {
+//        "animate.css": "latest"
+//    },
+//
+//    "exportsOverride": {
+//        "animate.css": {
+//            "__untyped__": [
+//                "bower.json",
+//                "animate.css",
+//                "animate.min.css"
+//            ]
+//        }
+//    }
 }
